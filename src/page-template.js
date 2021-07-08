@@ -120,3 +120,5 @@ const generateTeamPage = function (employees) {
     </html>
   `
 };
+
+module.exports = generateHTML;
