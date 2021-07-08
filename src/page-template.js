@@ -22,6 +22,25 @@ const generateEngineer = function(engineer) {
     `
 }
 
+// Intern Card
+const generateIntern = function (intern) {
+    return `
+    <div class="col-4 mt-4">
+        <div class="card h-100">
+            <div class="card-header bg-info">
+                <h2>Intern</h2>
+                <h4>${intern.getName()}</h4>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: ${intern.getId()}</p>
+                <p class="email">Email:<a href="mailto:${intern.getEmail()}">${intern.getEmail()}</a></p>
+                <p class="school">School: ${intern.getSchool()}</p>
+            </div>
+        </div>
+    </div>
+    `
+};
+
 // HTML Starter Code
 const generateTeamPage = function (employees) {   
     return`
