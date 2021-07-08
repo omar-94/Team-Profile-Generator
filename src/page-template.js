@@ -8,14 +8,14 @@ const generateEngineer = function(engineer) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header bg-info">
+            <div class="card-header bg-secondary text-white">
                 <h2>Engineer</h2>
                 <h3>${engineer.getName()}</h3>
             </div>
             <div class="card-body">
                 <p class="id">ID: ${engineer.getId()}</p>
                 <p class="email">Email: <a href="mailto:${engineer.getEmail()}">${engineer.getEmail()}</a></p>
-                <p class="github">Github: <a href="https://github.com/${engineer.getGithub()}">${engineer.getGithub()}</a></p>
+                <p class="github">Github: <a href="https://github.com/${engineer.getGitHub()}">${engineer.getGitHub()}</a></p>
             </div>
         </div>
     </div>
@@ -27,7 +27,7 @@ const generateIntern = function (intern) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header bg-info">
+            <div class="card-header bg-secondary text-white">
                 <h2>Intern</h2>
                 <h4>${intern.getName()}</h4>
             </div>
@@ -46,7 +46,7 @@ const generateManager = function (manager) {
     return `
     <div class="col-4 mt-4">
         <div class="card h-100">
-            <div class="card-header bg-info">
+            <div class="card-header bg-secondary text-white">
                 <h2>Manager</h2>
                 <h4>${manager.getName()}</h4>
             </div>
@@ -102,9 +102,9 @@ const generateTeamPage = function (employees) {
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     </head>
     <body>
-        <div class="jumbotron jumbotron-fluid bg-info">
+        <div class="jumbotron jumbotron-fluid bg-info text-white">
             <div class="container">
-                <h1 class="display-3"><strong>Coding Team</strong></h1>
+                <h1 class="display-3"><strong> Coding Team </strong></h1>
             </div>
         </div>
         <main>
