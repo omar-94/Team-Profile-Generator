@@ -41,6 +41,55 @@ const generateIntern = function (intern) {
     `
 };
 
+// Manager Card
+const generateManager = function (manager) {
+    return `
+    <div class="col-4 mt-4">
+        <div class="card h-100">
+            <div class="card-header bg-info">
+                <h2>Manager</h2>
+                <h4>${manager.getName()}</h4>
+            </div>
+            <div class="card-body">
+                <p class="id">ID: ${manager.getId()}</p>
+                <p class="email">Email: <a href="mailto:${manager.getEmail()}">${manager.getEmail()}</a></p>
+                <p class="officeNum">Office Number: ${manager.getOfficeNum()}</p>
+            </div>
+        </div>
+    </div>
+    `
+};
+
+// Display Info
+generateHTML = (data) => {
+    pageArray = [];
+
+    for (let i = 0; i < data.length; i++) {
+        const employee = data[i];
+        const role = employee.getRole();
+
+        if (role === "Engineer") {
+            const engineer = generateEngineer(employee);
+            pageArray.push(engineer);
+        };
+
+        if (role === "Intern") {
+            const intern = generateIntern(employee);
+            pageArray.push(intern);
+        };
+
+        if (role === "Manager") {
+            const manager = generateManager(employee);
+            pageArray.push(manager);
+        };
+    };
+
+    const employees = pageArray.join('');
+
+    const generateTeam = generateTeamPage(employees);
+    return generateTeam;
+};
+
 // HTML Starter Code
 const generateTeamPage = function (employees) {   
     return`
