@@ -27,6 +27,7 @@ To run application you will need to install **node.js** along with the **Jest** 
 - NPM (Jest)
 - Javascript
 - HTML
+- Bootstrap
 
 ## Contact 
 Omar Nava  
